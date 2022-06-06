@@ -204,6 +204,8 @@ Share your thoughts [HERE](https://cgi.cse.unsw.edu.au/~cs1531/redirect_activity
 
 ## Additional Information
 
+### Sample package.json
+
 <details>
 
 <summary>Click to view our sample package.json</summary><br/>
