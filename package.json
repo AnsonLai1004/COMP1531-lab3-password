@@ -5,9 +5,13 @@
   "type": "module",
   "main": "password.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/preset-env": "^7.18.2",
+    "jest": "^28.1.1"
+  }
 }
