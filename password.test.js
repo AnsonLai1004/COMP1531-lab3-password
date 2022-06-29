@@ -12,7 +12,7 @@ describe('Horrible Password', () => {
     ${'123456789'}   | ${'Horrible Password'}
     ${'12345'}  | ${'Horrible Password'}
     ${'qwerty'}   | ${'Horrible Password'}
-    ${'Password'} | ${'Horrible Password'}
+    ${'password'} | ${'Horrible Password'}
     // add new test cases here
   `('Password $input is $expectedResult', ({ input, expectedResult }) => {
     expect(checkPassword(input)).toBe(expectedResult)
