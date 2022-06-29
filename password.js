@@ -38,7 +38,7 @@ export function checkPassword(password) {
   if (password === '123456789') return 'Horrible Password';
   if (password === '12345') return 'Horrible Password';
   if (password === 'qwerty') return 'Horrible Password';
-  if (password === 'Password') return 'Horrible Password';
+  if (password === 'password') return 'Horrible Password';
   // Strong 
   breakme: if (password.length >= 12) {
     if (!containsNumber(password)) break breakme;
