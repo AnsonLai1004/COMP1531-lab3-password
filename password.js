@@ -34,25 +34,25 @@
  */
 export function checkPassword(password) {
   // Horrible
-  if (password === '123456') return 'Horrible password';
-  if (password === '123456789') return 'Horrible password';
-  if (password === '12345') return 'Horrible password';
-  if (password === 'qwerty') return 'Horrible password';
-  if (password === 'password') return 'Horrible password';
+  if (password === '123456') return 'Horrible Password';
+  if (password === '123456789') return 'Horrible Password';
+  if (password === '12345') return 'Horrible Password';
+  if (password === 'qwerty') return 'Horrible Password';
+  if (password === 'password') return 'Horrible Password';
   // Strong 
   breakme: if (password.length >= 12) {
     if (!containsNumber(password)) break breakme;
     if (!hasLowerCase(password)) break breakme;
     if (!hasUpperCase(password)) break breakme;
-    return 'Strong password';
+    return 'Strong Password';
   }
   // Moderate 
   breakme: if (password.length >= 8) {
     if (!containsNumber(password)) break breakme;
-    return 'Moderate password';
+    return 'Moderate Password';
   }
   // Poor
-  return 'Poor password';
+  return 'Poor Password';
 }
 
 function containsNumber(str) {

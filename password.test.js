@@ -32,7 +32,7 @@ describe('Length', () => {
 })
 describe('has number', () => {
   test.each`
-    input     | expectedResul
+    input     | expectedResult
     ${'CompOneFiveThreeOne'}   | ${'Poor password'}
     ${'CompOneFive31'} | ${'Strong password'}
     ${'CompOneF3'} | ${'Moderate password'}
@@ -43,7 +43,7 @@ describe('has number', () => {
 })
 describe('Uppercase and lowercase', () => {
   test.each`
-    input     | expectedResul
+    input     | expectedResult
     ${'CompOneFIve3111'}   | ${'Strong password'}
     ${'componefive3111'} | ${'Moderate password'}
     ${'COMPFIVE3111'} | ${'Moderate password'}
