@@ -3,18 +3,18 @@
  * @module password.test
  */
 
-import { checkPassword } from './password';
+import { checkPassword } from './password.js';
 
-describe('Horrible password', () => {
+describe('Horrible Password', () => {
   test.each`
     input     | expectedResult
-    ${'123456'}  | ${'Horrible password'}
-    ${'123456789'}   | ${'Horrible password'}
-    ${'12345'}  | ${'Horrible password'}
-    ${'qwerty'}   | ${'Horrible password'}
-    ${'password'} | ${'Horrible password'}
+    ${'123456'}  | ${'Horrible Password'}
+    ${'123456789'}   | ${'Horrible Password'}
+    ${'12345'}  | ${'Horrible Password'}
+    ${'qwerty'}   | ${'Horrible Password'}
+    ${'Password'} | ${'Horrible Password'}
     // add new test cases here
-  `('password $input is $expectedResult', ({ input, expectedResult }) => {
+  `('Password $input is $expectedResult', ({ input, expectedResult }) => {
     expect(checkPassword(input)).toBe(expectedResult)
   })
 })
@@ -22,33 +22,33 @@ describe('Horrible password', () => {
 describe('Length', () => {
   test.each`
     input     | expectedResult
-    ${'Comp1531AAAA'}  | ${'Strong password'}
-    ${'Comp1531'}   | ${'Moderate password'}
-    ${'Comp'}  | ${'Poor password'}
+    ${'Comp1531AAAA'}  | ${'Strong Password'}
+    ${'Comp1531'}   | ${'Moderate Password'}
+    ${'Comp'}  | ${'Poor Password'}
     // add new test cases here
-  `('password $input is $expectedResult', ({ input, expectedResult }) => {
+  `('Password $input is $expectedResult', ({ input, expectedResult }) => {
     expect(checkPassword(input)).toBe(expectedResult)
   })
 })
 describe('has number', () => {
   test.each`
     input     | expectedResult
-    ${'CompOneFiveThreeOne'}   | ${'Poor password'}
-    ${'CompOneFive31'} | ${'Strong password'}
-    ${'CompOneF3'} | ${'Moderate password'}
+    ${'CompOneFiveThreeOne'}   | ${'Poor Password'}
+    ${'CompOneFive31'} | ${'Strong Password'}
+    ${'CompOneF3'} | ${'Moderate Password'}
     // add new test cases here
-  `('password $input is $expectedResult', ({ input, expectedResult }) => {
+  `('Password $input is $expectedResult', ({ input, expectedResult }) => {
     expect(checkPassword(input)).toBe(expectedResult)
   })
 })
 describe('Uppercase and lowercase', () => {
   test.each`
     input     | expectedResult
-    ${'CompOneFIve3111'}   | ${'Strong password'}
-    ${'componefive3111'} | ${'Moderate password'}
-    ${'COMPFIVE3111'} | ${'Moderate password'}
+    ${'CompOneFIve3111'}   | ${'Strong Password'}
+    ${'componefive3111'} | ${'Moderate Password'}
+    ${'COMPFIVE3111'} | ${'Moderate Password'}
     // add new test cases here
-  `('password $input is $expectedResult', ({ input, expectedResult }) => {
+  `('Password $input is $expectedResult', ({ input, expectedResult }) => {
     expect(checkPassword(input)).toBe(expectedResult)
   })
 })
